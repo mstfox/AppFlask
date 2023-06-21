@@ -16,17 +16,22 @@
 </hEAd>
 <body>
     <div class="container">
-        <h1 class="text-center">Mustafa Khanzadi</h1>
+        <h1 class="text-center mb-4 mt-2">Mustafa Khanzadi</h1>
         <img class="img-fluid", id = 'banner', src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80">
-        <h2 class="text-center">About Mustafa</h2>
+        <h2 class="text-center mb-4 mt-2">About Mustafa</h2>
         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo urna molestie at elementum eu facilisis sed. Diam ut venenatis tellus in. Vitae et leo duis ut diam. Ultrices eros in cursus turpis massa tincidunt dui ut. Vel fringilla est ullamcorper eget nulla facilisi. Volutpat consequat mauris nunc congue. Purus faucibus ornare suspendisse sed nisi lacus. Rutrum tellus pellentesque eu tincidunt tortor aliquam. Facilisi etiam dignissim diam quis. Vestibulum lectus mauris ultrices eros in cursus. Mattis pellentesque id nibh tortor id aliquet. Et malesuada fames ac turpis egestas. Viverra adipiscing at in tellus integer feugiat scelerisque varius. Ut sem viverra aliquet eget sit amet. Mauris sit amet massa vitae tortor condimentum lacinia quis vel. Risus sed vulputate odio ut enim blandit volutpat maecenas.
         </p>
-        <h2 class="text-center">Open Positions</h2>
-        <p >
-            TO DO - show the jobs here
-        </p>
-    <div>
-        <button>Contact Us</button>
+        <h2 class="text-center mb-4 mt-2">Open Positions</h2>
+        
+        <div >
+            {% for job in jobs%}
+                {% include 'jobitem.html' %}
+            {% endfor %}
+        </div>
+    
+    <div class='text-center'>
+        <button type="button" class="btn btn-primary btn-lg">Contact Us</button>
+        <p class='mt-4'> Copyright 2023 MUSI</p>
     </div>
 
     </div>
